@@ -1,0 +1,60 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: white;
+   
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+.grid div {
+    background-color: #F9F9F9;
+    border: 1px solid #DADEE3;
+    border-radius: 8px;
+}
+
+.grid img {
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.pre-headline {
+    font-size: 18px;
+    font-weight: 600;
+    color: #16A34A;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}

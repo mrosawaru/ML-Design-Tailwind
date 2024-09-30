@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailerLite Redesign</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/edmanuel1/style.css">
+    <style>
+        /* Styles for the navigation drawer */
+        .drawer {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 250px;
+            height: 100%;
+            background-color: white;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            transition: left 0.3s ease;
+            z-index: 1000;
+        }
+
+        .drawer.open {
+            left: 0;
+        }
+
+        .drawer a {
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+            color: gray;
+        }
+
+        .drawer a:hover {
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header Section with Navigation -->
+    <header class="py-6 px-8 bg-white">
+        <nav class="flex items-center justify-between">
+            <div>
+                <img src="/edmanuel1/images/mailerlite_logo.svg.png" alt="MailerLite Logo" class="h-10">
+            </div>
+            <!-- Hamburger Icon for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#" class="text-gray-700 hover:text-green-600">Features</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-green-600">Pricing</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-green-600">Gallery</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-green-600">Why Lite</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-green-600">Resources</a></li>
+            </ul>
+            <div class="hidden md:flex space-x-4">
+                <button class="text-gray-700 hover:text-green-600">Log in</button>
+                <button class="bg-green-600 text-white px-4 py-2 rounded">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="drawer" class="drawer">
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Gallery</a>
+        <a href="#">Why Lite</a>
+        <a href="#">Resources</a>
+        <a href="#">Log in</a>
+        <a href="#" class="bg-green-600 text-white px-4 py-2 rounded">Sign Up</a>
+    </div>
+
+    <!-- Main Hero Section -->
+    <section class="text-center py-20 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <!-- Pre-Headline -->
+            <p class="text-lg text-green-600 font-semibold mb-2">Grow Your Business</p>
+            <!-- Main Headline -->
+            <h1 class="text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                Create <span class="text-green-600">Email Marketing</span> your audience will love
+            </h1>
+            <!-- Sub-headline -->
+            <p class="text-xl text-gray-600 mb-8">Digital marketing tools to grow your audience faster and drive revenue smarter. Backed by 24-7 award-winning support.</p>
+            <!-- CTA Buttons -->
+            <div class="flex justify-center space-x-4">
+                <button class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold text-lg">Try for Free</button>
+                <button class="bg-transparent border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold text-lg">Watch Demo</button>
+            </div>
+        </div>
+        <!-- Hero Image -->
+        <div class="mt-10">
+            <img src="/edmanuel1/images/feature.png" alt="Hero Image" class="mx-auto rounded-lg">
+        </div>
+    </section>
+
+    <!-- Tools Section with 3 Columns -->
+    <section class="py-20 bg-gray-50">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900">Get started with some of our tools</h2>
+            <p class="text-lg text-gray-600 mt-4">Get started today and discover how our solutions can make a difference in your day-to-day operations.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+            <!-- Column 1 -->
+            <div class="bg-gray-100 border border-gray-300 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Websites →</h3>
+                <p class="text-gray-600 mb-6">Build stunning websites on your own and let your business shine.</p>
+                <img src="/edmanuel1/images/Frame 584.png" alt="Websites" class="mx-auto rounded-md">
+            </div>
+
+            <!-- Column 2 -->
+            <div class="bg-gray-100 border border-gray-300 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Signup forms →</h3>
+                <p class="text-gray-600 mb-6">Grow your audience with highly effective subscribe forms.</p>
+                <img src="/edmanuel1/images/Frame 584-2.png" alt="Signup Forms" class="mx-auto rounded-md">
+            </div>
+
+            <!-- Column 3 -->
+            <div class="bg-gray-100 border border-gray-300 p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-4">Paid newsletter subscriptions →</h3>
+                <p class="text-gray-600 mb-6">Easily set up recurring payments to offer paid subscriptions.</p>
+                <img src="/edmanuel1/images/Frame 584-3.png" alt="Newsletter Subscriptions" class="mx-auto rounded-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Drawer Toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const drawer = document.getElementById('drawer');
+
+        menuToggle.addEventListener('click', function() {
+            drawer.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
